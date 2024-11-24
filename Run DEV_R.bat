@@ -14,13 +14,12 @@ echo "| |              | || |              | || |              | || |           
 echo "| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |"
 echo "'----------------'  '----------------'  '----------------'  '----------------'  '----------------'  "
 
+echo DEV_R Is Running ...
+echo DEBUG MODE ...
+echo -------------------------------------------------------------------------------------------------------
+
 python DEV_R.py
 
 if %errorlevel% neq 0 (
     powershell -command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('An error occurred while running Terminal.py', 'Error', 'OK', 'Error')"
 )
-
-echo DEV_R Is Running ...
-echo DEBUG MODE ...
-echo -------------------------------------------------------------------------------------------------------
-
